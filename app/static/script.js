@@ -59,7 +59,7 @@ function addMessage(text, sender) {
 function addTyping() {
   const typingEl = document.createElement("div");
   typingEl.classList.add("message", "typing");
-  typingEl.innerText = "Gemini is typing...";
+  typingEl.innerText = "Bot is typing...";
   chatWindow.appendChild(typingEl);
   scrollToBottom();
   return typingEl;
