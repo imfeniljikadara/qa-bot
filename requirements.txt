@@ -1,5 +1,5 @@
 python-dotenv
-fastapi
+fastapi[all]
 uvicorn
 celery[rabbitmq]
 redis
