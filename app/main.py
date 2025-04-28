@@ -1,4 +1,6 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from app.models import QuestionRequest, TaskStatusResponse, TaskResultResponse
 from app.tasks import process_question
 from celery.result import AsyncResult
@@ -6,13 +8,11 @@ from app.cache import cache_get
 
 app = FastAPI()
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # For dev; replace with frontend URL for production
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
+
+@app.get("/")
+def serve_index():
+    return FileResponse("app/static/index.html")
 
 @app.post("/ask", response_model=TaskStatusResponse)
 async def ask_question(request: QuestionRequest):
