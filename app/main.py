@@ -6,6 +6,14 @@ from app.cache import cache_get
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 @app.post("/ask", response_model=TaskStatusResponse)
 async def ask_question(request: QuestionRequest):
     cached_answer = await cache_get(request.question)
