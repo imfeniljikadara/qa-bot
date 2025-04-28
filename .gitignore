@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual env
+venv/
+.env
+
+# VS Code settings
+.vscode/
+
+# Mac OS
+.DS_Store
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Celery
+celerybeat-schedule
+celerybeat.pid

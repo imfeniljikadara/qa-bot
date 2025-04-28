@@ -1,0 +1,6 @@
+python-dotenv
+fastapi
+uvicorn
+celery
+redis
+google-generativeai
