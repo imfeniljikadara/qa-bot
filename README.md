@@ -158,7 +158,7 @@ A scalable **Q&A bot** powered by **Gemini 1.5 Flash**, built with
     `docker build -t qa-bot .`\
     `docker run -p 8000:8000 --env-file .env qa-bot`
 
-    ## Caching Methodology
+### Caching Methodology
 
 - **Redis (Railway)** is used to **cache responses** to repeated questions.
 - Cached answers are **retrieved instantly** (without re-querying Gemini).
