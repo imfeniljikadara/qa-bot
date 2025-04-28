@@ -1,10 +1,12 @@
 from celery import Celery
 import os
 
+BROKER_URL = os.getenv("BROKER_URL")  
+
 celery_app = Celery(
     "worker",
-    broker=os.getenv("BROKER_URL"),   
-    backend=os.getenv("BROKER_URL"),  
+    broker=BROKER_URL,
+    backend="rpc://",  
 )
 
 celery_app.conf.task_routes = {

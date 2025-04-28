@@ -1,6 +1,6 @@
 python-dotenv
 fastapi
 uvicorn
-celery
+celery[rabbitmq]
 redis
 google-generativeai
