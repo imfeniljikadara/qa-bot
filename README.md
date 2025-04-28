@@ -1,4 +1,4 @@
-# Gemini Q&A Bot
+# Q&A Bot
 
 A scalable **Q&A bot** powered by **Gemini 1.5 Flash**, built with
 **FastAPI**, **Celery**, **RabbitMQ (CloudAMQP)**, and **Redis
