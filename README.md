@@ -2,7 +2,7 @@
 
 A scalable **Q&A bot** powered by **Gemini 1.5 Flash**, built with
 **FastAPI**, **Celery**, **RabbitMQ (CloudAMQP)**, and **Redis
-(Railway)** for caching.\
+(Railway)** for caching.
 
 # Setup Instructions
 - Clone the Repository
