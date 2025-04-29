@@ -22,7 +22,7 @@ form.addEventListener("submit", async (e) => {
 
     if (taskId === "cached") {
       removeTyping(typingEl);
-      addMessage("⚡ Answer was cached. Try again for new task!", "bot");
+      addMessage("Answer was cached. Try again for new task!", "bot");
       return;
     }
 

@@ -3,8 +3,6 @@
 A scalable **Q&A bot** powered by **Gemini 1.5 Flash**, built with
 **FastAPI**, **Celery**, **RabbitMQ (CloudAMQP)**, and **Redis
 (Railway)** for caching.\
-**Frontend**: Simple **chat-style UI** with animations, deployed on
-**Vercel**.
 
 # Setup Instructions
 - Clone the Repository
@@ -25,7 +23,7 @@ A scalable **Q&A bot** powered by **Gemini 1.5 Flash**, built with
    ```
 - Render Deployment Commands
     ```
-    sh -c "PYTHONPATH=. celery -A worker.worker.celery_app worker --loglevel=info -Q qa_tasks & uvicorn app.main:app --host 0.0.0.0 --port 8000"`\
+    sh -c "PYTHONPATH=. celery -A worker.worker.celery_app worker --loglevel=info -Q qa_tasks & uvicorn app.main:app --host 0.0.0.0 --port 8000"
     ```
 
 # Caching Logic
